@@ -45,15 +45,6 @@ Aplikace běží přímo v prohlížeči, neinstaluje se a nepotřebuje účet.
 
 Projekt vznikl v [8th Wall Studiu](https://www.8thwall.com/).
 
-
-## Zdroje dat
-
-3D modely krajiny vznikly zpracováním veřejně dostupných prostorových dat a historických map:
-
-- výškopis a současné využití území: ČÚZK (DMR 5G, RUIAN)
-- historické mapové podklady (19. a 20. století): [doplnit zdroj, např. ČÚZK / Národní archiv]
-- kostel sv. Bartoloměje (Frymburk): [doplnit autora podkladů]
-
 Použité písmo: [Merriweather Sans](https://fonts.google.com/specimen/Merriweather+Sans), licence SIL OFL 1.1.
 
 ## Autor

@@ -4,9 +4,11 @@ import {ensureFont, FONT_FAMILY} from './fonts'
 // Úvodní výzva k naskenování atlasu jako HTML (DOM) overlay – podporuje českou diakritiku.
 // Použití: přidej komponentu "scan-prompt" na libovolnou entitu (např. Camera).
 // Dokud není nalezen žádný image target, výzva je vidět; po nalezení se skryje.
+// Po ztrátě trackingu se zobrazí až po krátkém zpoždění a jen pokud tracking stále chybí.
 
 const TITLE = 'Naskenuj stránku atlasu'
 const SUBTITLE = 'Zamiř kamerou na mapu Zvíkova nebo Frymburku'
+const SHOW_DELAY_MS = 500   // zpoždění zobrazení po ztrátě trackingu
 
 ecs.registerComponent({
   name: 'scan-prompt',
@@ -14,13 +16,14 @@ ecs.registerComponent({
     ensureFont()
     const found = new Set<string>()
     let alive = true
+    let timer: number | undefined
 
     const box = document.createElement('div')
     box.setAttribute('data-scan-prompt', '')
     box.style.cssText = [
       'position:fixed',
       'left:50%',
-      'bottom:12%',
+      'bottom:calc(130px + env(safe-area-inset-bottom, 0px))',   // nad tlačítky
       'transform:translateX(-50%)',
       'width:min(90vw,460px)',
       'padding:16px 20px',
@@ -47,8 +50,20 @@ ecs.registerComponent({
     box.appendChild(sub)
     document.body.appendChild(box)
 
+    const show = (v: boolean) => {
+      box.style.opacity = v ? '1' : '0'
+    }
+
     const update = () => {
-      box.style.opacity = found.size > 0 ? '0' : '1'
+      window.clearTimeout(timer)
+      if (found.size > 0) {
+        show(false)               // target nalezen: skrýt hned
+      } else {
+        // tracking chybí: zobrazit až po prodlevě a jen pokud stále chybí
+        timer = window.setTimeout(() => {
+          if (alive && found.size === 0) show(true)
+        }, SHOW_DELAY_MS)
+      }
     }
 
     const nameOf = (event: {data?: unknown}) =>
@@ -65,7 +80,8 @@ ecs.registerComponent({
       update()
     })
 
-    update()
+    // na začátku je výzva vidět hned
+    show(true)
   },
   remove: () => {
     // odstranění prvku při zrušení komponenty
