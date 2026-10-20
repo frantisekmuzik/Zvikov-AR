@@ -197,7 +197,7 @@
       },
       "order": 7.401958399382184,
       "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03",
-      "hidden": true
+      "hidden": false
     },
     "d82012b5-0570-43c9-9516-f5c68e010a3b": {
       "id": "d82012b5-0570-43c9-9516-f5c68e010a3b",
@@ -1101,14 +1101,14 @@
       "gltfModel": {
         "src": {
           "type": "asset",
-          "asset": "assets/Zvikov_Vltava_vyska.gltf"
+          "asset": "assets/modely/Zvikov_Vltava_soucasny_tok.gltf"
         },
         "animationClip": "",
         "loop": true
       },
       "name": "Vltava_Zvikov",
       "order": 27,
-      "hidden": true
+      "hidden": false
     },
     "f52a96e9-bd77-4189-a33f-a83ab8103ae1": {
       "id": "f52a96e9-bd77-4189-a33f-a83ab8103ae1",
@@ -1137,7 +1137,7 @@
       },
       "order": 7.812616116309772,
       "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03",
-      "hidden": false
+      "hidden": true
     },
     "78127f6a-feb4-49f0-a6ee-8a82802710f0": {
       "id": "78127f6a-feb4-49f0-a6ee-8a82802710f0",
@@ -1194,7 +1194,7 @@
       },
       "name": "Frymburk_CO",
       "order": 2,
-      "hidden": false
+      "hidden": true
     },
     "8e4212c1-d516-4f31-8317-dd0f2738a413": {
       "id": "8e4212c1-d516-4f31-8317-dd0f2738a413",
@@ -1346,7 +1346,7 @@
       },
       "name": "Frymburk_SMO5",
       "order": 6,
-      "hidden": false
+      "hidden": true
     },
     "f9db43f0-b94c-4d74-924a-699fe951ffdc": {
       "id": "f9db43f0-b94c-4d74-924a-699fe951ffdc",
