@@ -1,52 +1,61 @@
-# Studio: Image Targets
+# VLTAVA – Příběh řeky na mapách a plánech (AR)
 
-This project demonstrates how to use Image Targets to anchor virtual content to images in the real world.
-There are multiple spaces in this project that showcase different types of image targets.
+![Náhled aplikace](./src/assets/preview.png)
 
-![Preview of the image targets project open in the editor](./src/assets/preview.png)
+Webová aplikace rozšířené reality k atlasu **VLTAVA – Příběh řeky na mapách a plánech**. Pro zobrazení rozšířené reality stačí namířit kameru telefonu na stránku atlasu se **Zvíkovem** nebo **Frymburkem** a nad mapou se zobrazí 3D model krajiny. Modely lze přepínat mezi **19., 20. a 21. stoletím** a porovnat historický landuse se současným stavem krajiny v okolí vodních nádrží **Lipno** a **Orlík**.
 
-<details><summary>Try it out</summary>
+## Vyzkoušet
 
-https://8thwall.org/studio-image-targets-example
+**Odkaz na vyzkoušení:** https://frantisekmuzik.github.io/Zvikov-AR/
 
-<img alt="QR Code for the preview link" src="https://8th.io/qr?v=2&url=https://8thwall.org/studio-image-targets-example" width=250 height=250 />
+Otevři odkaz na telefonu nebo naskenuj QR kód:
 
-## Playing Cards
+<img alt="QR kód pro otevření aplikace" src="./docs/qr_aplikace.png" width="220" />
 
-<img alt="Fire Image Target" src="./image-targets/20_Element_Fire_original.png" width=400 />
-<img alt="Water Image Target" src="./image-targets/23_Element_Water_original.png" width=400 />
-<img alt="Air Image Target" src="./image-targets/22_Element_Air_original.png" width=400 />
-<img alt="Earth" src="./image-targets/25_Element_Earth_original.png" width=400 />
+## Jak to funguje
 
-## BMO Bites
+1. Otevři odkaz v prohlížeči na **mobilním zařízení** a povol kameru.
+2. Naskenuj stránku atlasu s mapou Zvíkova nebo Frymburku. *Aplikaci lze vyzkoušet i bez papírového atlasu. Otevři aplikaci na telefonu a namiř kameru na jednu z map níže zobrazenou na druhém zařízení (počítač, tablet) nebo na jejich výtisk. Mapu na obrazovce zobraz celou, co největší a bez odlesků.*
+3. Nad stránkou se zobrazí 3D model. Tlačítky dole přepínáš období (19., 20. a 21. století), tlačítko vpravo nahoře zapíná vodní nádrž (Lipno u Frymburku, Orlík u Zvíkova).
+4. Legenda s měřítkem je součástí modelu.
 
-<img alt="Cereal Box Image Target" src="./image-targets/bmo-bites_original.png" width=400 />
+Aplikace běží přímo v prohlížeči, neinstaluje se a nepotřebuje účet.
 
-## Magic Photos
+<table>
+  <tr>
+    <td align="center"><a href="./docs/mapa_zvikov.jpg"><img alt="Mapa Zvíkov" src="./docs/mapa_zvikov.jpg" width="320" /></a><br><b>Zvíkov</b></td>
+    <td align="center"><a href="./docs/mapa_frymburk.jpg"><img alt="Mapa Frymburk" src="./docs/mapa_frymburk.jpg" width="320" /></a><br><b>Frymburk</b></td>
+  </tr>
+</table>
 
-<img alt="Waves Image Target" src="./image-targets/waves_original.jpg" width=400 />
+## Obsah projektu
 
-## Toggle SLAM
+| Cesta | K čemu slouží |
+| --- | --- |
+| `src/.expanse.json` | scéna 8th Wall Studia (modely, image targety, tlačítka) |
+| `src/tlacitka.ts` | přepínání období a hladiny vodní nádrže, tlačítka s českou diakritikou |
+| `src/scan-prompt.ts` | úvodní výzva k naskenování stránky atlasu |
+| `src/fonts.ts`, `src/assets/fonts/` | písmo Merriweather Sans (OFL) |
+| `src/assets/modely/` | 3D modely krajiny (GLB) |
+| `image-targets/` | data pro rozpoznání stránek atlasu (Zvíkov, Frymburk) |
+| `docs/` | mapy ke zkušebnímu skenování a QR kód aplikace |
+| `.github/workflows/deploy.yml` | automatický deploy na GitHub Pages |
 
-<img alt="Scan to Toggle SLAM Image Target" src="./image-targets/toggle-slam_original.png" width=400 />
+## Vývoj
 
-</details>
+Projekt vznikl v [8th Wall Studiu](https://www.8thwall.com/).
 
-## Usage
 
-1. [Install the Desktop App](https://8thwall.org/downloads)
-2. On this repository, click Code > Download zip
-3. Unzip the folder to the location you'd like to work in
-4. In the desktop app, click "Open" and select the folder
-5. To connect to a mobile device, follow [these instructions](https://8th.io/connect-device)
-6. When importing your own targets, please see [this guide](https://8thwall.org/docs/studio/guides/xr/image-targets) for more information
-7. Recommended: Track your files using [git](https://git-scm.com/about) to avoid losing progress
+## Zdroje dat a poděkování
 
-## Deployment
+3D modely krajiny vznikly zpracováním veřejně dostupných prostorových dat a historických map:
 
-This project contains Github Actions configuration for deployment to Github Pages, which triggers automatically by pushing the `main` branch. You can also follow the publishing instructions here: https://8thwall.org/docs/getting-started/publishing to publish to any other web host.
+- výškopis a současné využití území: ČÚZK (DMR 5G, RUIAN) – [doplnit přesné zdroje a licenci, např. CC BY 4.0]
+- historické mapové podklady (19. a 20. století): [doplnit zdroj, např. ČÚZK / Národní archiv]
+- kostel sv. Bartoloměje (Frymburk): [doplnit autora podkladů]
 
-## Questions?
+Použité písmo: [Merriweather Sans](https://fonts.google.com/specimen/Merriweather+Sans), licence SIL OFL 1.1.
 
-Please raise any questions on [Github Discussions](https://github.com/orgs/8thwall/discussions) or join the [Discord](https://8th.io/discord) to connect with the community.
+## Autor
 
+**František Mužík**, katedra geomatiky, Fakulta stavební ČVUT v Praze.
