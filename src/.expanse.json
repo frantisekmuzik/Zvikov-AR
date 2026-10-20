@@ -197,7 +197,7 @@
       },
       "order": 7.401958399382184,
       "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03",
-      "hidden": false
+      "hidden": true
     },
     "d82012b5-0570-43c9-9516-f5c68e010a3b": {
       "id": "d82012b5-0570-43c9-9516-f5c68e010a3b",
@@ -256,286 +256,6 @@
       "order": 5,
       "hidden": true
     },
-    "441f2fab-9fd2-4c5b-bafa-d0f086989726": {
-      "id": "441f2fab-9fd2-4c5b-bafa-d0f086989726",
-      "position": [
-        289.6157612777415,
-        315.00945856283806,
-        482.5961188142467
-      ],
-      "rotation": [
-        -0.7071067811865476,
-        1.2325951644078307e-32,
-        -1.232595164407831e-32,
-        0.7071067811865475
-      ],
-      "scale": [
-        100,
-        100,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "d8f2f4c7-5ee4-4964-be81-c698571fbec1",
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "Vltava",
-        "color": "#7894e8",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "Vltava popisek",
-      "order": 6,
-      "hidden": false
-    },
-    "3b8efdec-f9f0-4901-bc05-79babe67814d": {
-      "id": "3b8efdec-f9f0-4901-bc05-79babe67814d",
-      "position": [
-        -21.919511296424993,
-        332.69560887192335,
-        -468.8587817709481
-      ],
-      "rotation": [
-        -0.6618632337340514,
-        -0.24887157296707077,
-        -0.24887157296707113,
-        0.6618632337340519
-      ],
-      "scale": [
-        100.00000000000007,
-        100.00000000000013,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "<- Praha",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "směr Praha",
-      "order": 7,
-      "parentId": "d8f2f4c7-5ee4-4964-be81-c698571fbec1",
-      "disabled": true,
-      "hidden": false
-    },
-    "011c1f0e-4161-49bc-a203-8466b5e53663": {
-      "id": "011c1f0e-4161-49bc-a203-8466b5e53663",
-      "position": [
-        1.7074209846513688,
-        375.0275306909457,
-        421.73219006836496
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000007,
-        100.00000000000014,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "hrad\nZvikov",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Zvíkov",
-      "order": 8,
-      "parentId": "d8f2f4c7-5ee4-4964-be81-c698571fbec1"
-    },
-    "160e115c-23a8-4bab-b4ab-a07f183aac49": {
-      "id": "160e115c-23a8-4bab-b4ab-a07f183aac49",
-      "position": [
-        585.7687687728827,
-        448.9904925213523,
-        -481.8218979919101
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000007,
-        100.00000000000014,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "VARTA",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Varta",
-      "order": 9,
-      "parentId": "d8f2f4c7-5ee4-4964-be81-c698571fbec1"
-    },
-    "00e3c186-47e3-452d-82c6-ed460369ecff": {
-      "id": "00e3c186-47e3-452d-82c6-ed460369ecff",
-      "position": [
-        -610.4595362118395,
-        448.9904925213523,
-        -367.9823461717615
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000007,
-        100.00000000000014,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "ZBONIN",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Zbonín",
-      "order": 10,
-      "parentId": "d8f2f4c7-5ee4-4964-be81-c698571fbec1"
-    },
-    "82b1b29d-4e80-49b0-b356-7ceb3dc4d01c": {
-      "id": "82b1b29d-4e80-49b0-b356-7ceb3dc4d01c",
-      "position": [
-        -57.59979793075203,
-        347.89582933101656,
-        -28.569498555142758
-      ],
-      "rotation": [
-        -0.543812095506931,
-        0,
-        0,
-        0.8392070094919135
-      ],
-      "scale": [
-        100.00000000000007,
-        100.00000000000018,
-        100.00000000000003
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "ZVIKOVSKE\nPODHRADI",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Zvíkovské podhradí",
-      "order": 11,
-      "parentId": "d8f2f4c7-5ee4-4964-be81-c698571fbec1"
-    },
-    "0a0aaa29-32fa-4eea-a61d-ee6143a22b0b": {
-      "id": "0a0aaa29-32fa-4eea-a61d-ee6143a22b0b",
-      "position": [
-        -172.72228065591483,
-        332.69560887192307,
-        551.1340152064255
-      ],
-      "rotation": [
-        -0.6359783539776359,
-        0.30908175823218187,
-        0.3090817582321817,
-        0.6359783539776358
-      ],
-      "scale": [
-        99.99999999999996,
-        100.00000000000001,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "Otava",
-        "color": "#7894e8",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "Otava popisek",
-      "order": 12,
-      "parentId": "d8f2f4c7-5ee4-4964-be81-c698571fbec1"
-    },
     "ac5d5635-1c85-48e7-a3e9-38c761633264": {
       "id": "ac5d5635-1c85-48e7-a3e9-38c761633264",
       "position": [
@@ -567,245 +287,6 @@
       "name": "Zvikov_SMO5",
       "order": 13,
       "hidden": false
-    },
-    "4059b148-9ad1-48dc-8f82-b839525d1e19": {
-      "id": "4059b148-9ad1-48dc-8f82-b839525d1e19",
-      "position": [
-        289.6157612777415,
-        368.008,
-        482.5961188142467
-      ],
-      "rotation": [
-        -0.7071067811865476,
-        1.2325951644078307e-32,
-        -1.232595164407831e-32,
-        0.7071067811865475
-      ],
-      "scale": [
-        100,
-        100,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "ac5d5635-1c85-48e7-a3e9-38c761633264",
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "Vltava",
-        "color": "#7894e8",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "Vltava popisek (1)",
-      "order": 14
-    },
-    "7ac88243-6eaa-45bd-925c-84c74409822a": {
-      "id": "7ac88243-6eaa-45bd-925c-84c74409822a",
-      "position": [
-        -21.919511296424993,
-        332.69560887192335,
-        -468.8587817709481
-      ],
-      "rotation": [
-        -0.6618632337340514,
-        -0.24887157296707077,
-        -0.24887157296707113,
-        0.6618632337340519
-      ],
-      "scale": [
-        100.00000000000007,
-        100.00000000000013,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "<- Praha",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "směr Praha (1)",
-      "order": 15,
-      "parentId": "ac5d5635-1c85-48e7-a3e9-38c761633264",
-      "hidden": false,
-      "disabled": true
-    },
-    "afae4963-cbf5-41d5-bd25-e0e550da36ee": {
-      "id": "afae4963-cbf5-41d5-bd25-e0e550da36ee",
-      "position": [
-        120.22025588016363,
-        375.0275306909458,
-        288.2728834946538
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000013,
-        100.0000000000002,
-        100.00000000000007
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 150,
-        "height": "100",
-        "text": "hrad \nZvikov",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Zvíkov (1)",
-      "order": 16,
-      "parentId": "ac5d5635-1c85-48e7-a3e9-38c761633264"
-    },
-    "efecc253-02c4-40ce-bfbe-b4a3d1312398": {
-      "id": "efecc253-02c4-40ce-bfbe-b4a3d1312398",
-      "position": [
-        623.2961564571152,
-        448.9904925213523,
-        -458.84920674618326
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000009,
-        100.00000000000017,
-        100.00000000000003
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "VARTA",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Varta (1)",
-      "order": 17,
-      "parentId": "ac5d5635-1c85-48e7-a3e9-38c761633264"
-    },
-    "2ba8c899-3e91-435d-839c-e521988124a9": {
-      "id": "2ba8c899-3e91-435d-839c-e521988124a9",
-      "position": [
-        -610.4595362118395,
-        448.9904925213523,
-        -367.9823461717615
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000007,
-        100.00000000000014,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "ZBONIN",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Zbonín (1)",
-      "order": 18,
-      "parentId": "ac5d5635-1c85-48e7-a3e9-38c761633264"
-    },
-    "fac2dbc3-9ee9-4e81-b1bb-566b060435fd": {
-      "id": "fac2dbc3-9ee9-4e81-b1bb-566b060435fd",
-      "position": [
-        -172.72228065591483,
-        332.69560887192307,
-        551.1340152064255
-      ],
-      "rotation": [
-        -0.6359783539776359,
-        0.30908175823218187,
-        0.3090817582321817,
-        0.6359783539776358
-      ],
-      "scale": [
-        99.99999999999996,
-        100.00000000000001,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "Otava",
-        "color": "#7894e8",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "Otava popisek (1)",
-      "order": 19,
-      "parentId": "ac5d5635-1c85-48e7-a3e9-38c761633264"
     },
     "a4def8f4-e61f-401a-a2a1-66243e2397d6": {
       "id": "a4def8f4-e61f-401a-a2a1-66243e2397d6",
@@ -839,245 +320,6 @@
       "order": 20,
       "hidden": true
     },
-    "8bc7e182-6601-45f1-9002-31bfcd9784b6": {
-      "id": "8bc7e182-6601-45f1-9002-31bfcd9784b6",
-      "position": [
-        289.6157612777418,
-        398.9266580653189,
-        482.59600000000023
-      ],
-      "rotation": [
-        -0.7071067811865476,
-        1.2325951644078307e-32,
-        -1.232595164407831e-32,
-        0.7071067811865475
-      ],
-      "scale": [
-        100.00000000000013,
-        100.00000000000013,
-        100.00000000000013
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "a4def8f4-e61f-401a-a2a1-66243e2397d6",
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "Vltava",
-        "color": "#7894e8",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "Vltava popisek (2)",
-      "order": 21
-    },
-    "3b2e8314-7566-474f-94d2-55d6c8022665": {
-      "id": "3b2e8314-7566-474f-94d2-55d6c8022665",
-      "position": [
-        -21.919511296424993,
-        375.07344180842927,
-        -468.85878177094855
-      ],
-      "rotation": [
-        -0.6618632337340518,
-        -0.24887157296707108,
-        -0.24887157296707108,
-        0.6618632337340514
-      ],
-      "scale": [
-        100.0000000000002,
-        100.00000000000028,
-        100.00000000000018
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "smer Praha",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "směr Praha (2)",
-      "order": 22,
-      "parentId": "a4def8f4-e61f-401a-a2a1-66243e2397d6",
-      "hidden": false,
-      "disabled": true
-    },
-    "6fd5ba98-6f7f-42ef-9ce1-d6dee6fcbd94": {
-      "id": "6fd5ba98-6f7f-42ef-9ce1-d6dee6fcbd94",
-      "position": [
-        120.22025588016363,
-        375.0275306909458,
-        288.2728834946538
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000013,
-        100.0000000000002,
-        100.00000000000007
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 150,
-        "height": "100",
-        "text": "hrad\nZvikov",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Zvíkov (2)",
-      "order": 23,
-      "parentId": "a4def8f4-e61f-401a-a2a1-66243e2397d6"
-    },
-    "c1fe425c-7c60-4918-be79-811a51b26306": {
-      "id": "c1fe425c-7c60-4918-be79-811a51b26306",
-      "position": [
-        623.2961564571152,
-        448.9904925213523,
-        -458.84920674618326
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000009,
-        100.00000000000017,
-        100.00000000000003
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "VARTA",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Varta (2)",
-      "order": 24,
-      "parentId": "a4def8f4-e61f-401a-a2a1-66243e2397d6"
-    },
-    "3f4503bd-5c29-4c8d-88ec-7225c4583618": {
-      "id": "3f4503bd-5c29-4c8d-88ec-7225c4583618",
-      "position": [
-        -610.4595362118395,
-        448.9904925213523,
-        -367.9823461717615
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000007,
-        100.00000000000014,
-        100
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "ZBONIN",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Zbonín (2)",
-      "order": 25,
-      "parentId": "a4def8f4-e61f-401a-a2a1-66243e2397d6"
-    },
-    "e5ad8a47-e893-42fe-9653-c9041443c5b5": {
-      "id": "e5ad8a47-e893-42fe-9653-c9041443c5b5",
-      "position": [
-        -172.72228065591486,
-        368.00776292195775,
-        551.1340152064256
-      ],
-      "rotation": [
-        -0.6359783539776358,
-        0.30908175823218187,
-        0.30908175823218165,
-        0.6359783539776359
-      ],
-      "scale": [
-        99.99999999999999,
-        100.00000000000003,
-        100.00000000000003
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "Otava",
-        "color": "#7894e8",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "Otava popisek (2)",
-      "order": 26,
-      "parentId": "a4def8f4-e61f-401a-a2a1-66243e2397d6"
-    },
     "17b77231-b394-4d8f-9757-15fb539b8792": {
       "id": "17b77231-b394-4d8f-9757-15fb539b8792",
       "position": [
@@ -1108,7 +350,7 @@
       },
       "name": "Vltava_Zvikov",
       "order": 27,
-      "hidden": false
+      "hidden": true
     },
     "f52a96e9-bd77-4189-a33f-a83ab8103ae1": {
       "id": "f52a96e9-bd77-4189-a33f-a83ab8103ae1",
@@ -1137,7 +379,7 @@
       },
       "order": 7.812616116309772,
       "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03",
-      "hidden": true
+      "hidden": false
     },
     "78127f6a-feb4-49f0-a6ee-8a82802710f0": {
       "id": "78127f6a-feb4-49f0-a6ee-8a82802710f0",
@@ -1196,126 +438,6 @@
       "order": 2,
       "hidden": true
     },
-    "8e4212c1-d516-4f31-8317-dd0f2738a413": {
-      "id": "8e4212c1-d516-4f31-8317-dd0f2738a413",
-      "position": [
-        -425.93262785380006,
-        25.800945167040478,
-        -277.3620566433789
-      ],
-      "rotation": [
-        -0.7060065753445792,
-        -0.0394298816916703,
-        -0.039429881691670395,
-        0.706006575344579
-      ],
-      "scale": [
-        100.0000000000003,
-        100.00000000000017,
-        100.00000000000028
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "c9630742-196b-428f-9007-2d3d405a24f3",
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "Vltava",
-        "color": "#7894e8",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "Vltava popisek (3)",
-      "order": 3,
-      "hidden": false
-    },
-    "3dd6b3dd-2592-4c3e-afbd-d6a32386fab7": {
-      "id": "3dd6b3dd-2592-4c3e-afbd-d6a32386fab7",
-      "position": [
-        343.3864203516812,
-        53.881291688230284,
-        -40.42719244260789
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000017,
-        100.00000000000024,
-        100.0000000000001
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "FRYMBURK",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Frymburk",
-      "order": 4,
-      "parentId": "c9630742-196b-428f-9007-2d3d405a24f3"
-    },
-    "18894a17-9efe-45c4-9594-d043298488a7": {
-      "id": "18894a17-9efe-45c4-9594-d043298488a7",
-      "position": [
-        -474.1294566937375,
-        60.868730995330615,
-        100.99610677881701
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000028,
-        100.00000000000036,
-        100.00000000000021
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "FRYDAVA",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Frydava",
-      "order": 5,
-      "parentId": "c9630742-196b-428f-9007-2d3d405a24f3"
-    },
     "48950640-7d5f-4540-b42a-04fd15fd2e5a": {
       "id": "48950640-7d5f-4540-b42a-04fd15fd2e5a",
       "position": [
@@ -1347,126 +469,6 @@
       "name": "Frymburk_SMO5",
       "order": 6,
       "hidden": true
-    },
-    "f9db43f0-b94c-4d74-924a-699fe951ffdc": {
-      "id": "f9db43f0-b94c-4d74-924a-699fe951ffdc",
-      "position": [
-        -425.9326278538001,
-        25.800945167040506,
-        -277.36205664337893
-      ],
-      "rotation": [
-        -0.7060065753445792,
-        -0.0394298816916703,
-        -0.039429881691670395,
-        0.706006575344579
-      ],
-      "scale": [
-        100.0000000000003,
-        100.00000000000017,
-        100.0000000000003
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "48950640-7d5f-4540-b42a-04fd15fd2e5a",
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "Vltava",
-        "color": "#7894e8",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "Vltava popisek (3)",
-      "order": 7,
-      "hidden": false
-    },
-    "e2b0f7ed-3f94-482b-b913-1b639a7e6611": {
-      "id": "e2b0f7ed-3f94-482b-b913-1b639a7e6611",
-      "position": [
-        343.38642035168124,
-        53.88129168823031,
-        -40.42719244260789
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000018,
-        100.00000000000024,
-        100.00000000000011
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "FRYMBURK",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Frymburk (1)",
-      "order": 8,
-      "parentId": "48950640-7d5f-4540-b42a-04fd15fd2e5a"
-    },
-    "c39499c9-06be-409a-bc52-68e66eddc95f": {
-      "id": "c39499c9-06be-409a-bc52-68e66eddc95f",
-      "position": [
-        -474.12945669373755,
-        60.86873099533064,
-        100.99610677881702
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.0000000000003,
-        100.00000000000037,
-        100.00000000000023
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "FRYDAVA",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Frydava (1)",
-      "order": 9,
-      "parentId": "48950640-7d5f-4540-b42a-04fd15fd2e5a"
     },
     "26291f93-76f7-469c-9094-3eb3ca349429": {
       "id": "26291f93-76f7-469c-9094-3eb3ca349429",
@@ -1500,126 +502,6 @@
       "order": 10,
       "hidden": false
     },
-    "d6793ffb-ca52-4bba-9f38-8495fb0f1251": {
-      "id": "d6793ffb-ca52-4bba-9f38-8495fb0f1251",
-      "position": [
-        -43.24439022810648,
-        44.08229074109085,
-        294.85177238732047
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000033,
-        100.0000000000002,
-        100.0000000000004
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "26291f93-76f7-469c-9094-3eb3ca349429",
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "vodni nadrz\nLipno",
-        "color": "#7894e8",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Nunito"
-        }
-      },
-      "name": "Vltava popisek (3)",
-      "order": 11,
-      "hidden": false
-    },
-    "6da72bd8-a043-4d41-a1fc-fe8b6aa8d858": {
-      "id": "6da72bd8-a043-4d41-a1fc-fe8b6aa8d858",
-      "position": [
-        -506.88335346762165,
-        60.86873099533066,
-        211.80958140053906
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.00000000000033,
-        100.0000000000004,
-        100.00000000000027
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "FRYDAVA",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Frydava (2)",
-      "order": 12,
-      "parentId": "26291f93-76f7-469c-9094-3eb3ca349429"
-    },
-    "7cd8e06d-29cb-4323-96f8-46ac0664505a": {
-      "id": "7cd8e06d-29cb-4323-96f8-46ac0664505a",
-      "position": [
-        343.3864203516813,
-        53.88129168823035,
-        -40.42719244260789
-      ],
-      "rotation": [
-        -0.7071067811865475,
-        0,
-        0,
-        0.7071067811865476
-      ],
-      "scale": [
-        100.0000000000002,
-        100.00000000000024,
-        100.00000000000013
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {},
-      "ui": {
-        "flexDirection": "row",
-        "width": 300,
-        "height": 10,
-        "text": "FRYMBURK",
-        "color": "#585b65",
-        "fontSize": 40,
-        "type": "3d",
-        "verticalTextAlign": "center",
-        "font": {
-          "type": "font",
-          "font": "Futura"
-        },
-        "flexWrap": "nowrap"
-      },
-      "name": "Frymburk (2)",
-      "order": 13,
-      "parentId": "26291f93-76f7-469c-9094-3eb3ca349429"
-    },
     "9f103e85-4329-41f9-81df-84c4fbfbba7b": {
       "id": "9f103e85-4329-41f9-81df-84c4fbfbba7b",
       "position": [
@@ -1650,7 +532,7 @@
       },
       "name": "Vltava_Frymburk",
       "order": 14,
-      "hidden": false
+      "hidden": true
     },
     "c0d8ce2a-ef87-4573-8d28-e40d75c2b26c": {
       "id": "c0d8ce2a-ef87-4573-8d28-e40d75c2b26c",
@@ -1714,7 +596,206 @@
       },
       "name": "Frymburk_legenda",
       "order": -0.8844611817770867,
-      "parentId": "78127f6a-feb4-49f0-a6ee-8a82802710f0"
+      "parentId": "78127f6a-feb4-49f0-a6ee-8a82802710f0",
+      "hidden": false
+    },
+    "2499a151-b551-4b4e-8361-1124671d64ca": {
+      "id": "2499a151-b551-4b4e-8361-1124671d64ca",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "d8f2f4c7-5ee4-4964-be81-c698571fbec1",
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/modely/popisky/Zvikov_CO_popisky.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "Zvikov_CO_popisky.glb",
+      "order": 13.117368885348863
+    },
+    "29794e11-a931-4b96-b1e8-8ea320665f70": {
+      "id": "29794e11-a931-4b96-b1e8-8ea320665f70",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "ac5d5635-1c85-48e7-a3e9-38c761633264",
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/modely/popisky/Zvikov_SMO5_popisky.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "Zvikov_SMO5_popisky.glb",
+      "order": 20.572992414444407
+    },
+    "35e6f7ab-efbf-44d0-96f8-94ad7e6bffd3": {
+      "id": "35e6f7ab-efbf-44d0-96f8-94ad7e6bffd3",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "a4def8f4-e61f-401a-a2a1-66243e2397d6",
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/modely/popisky/Zvikov_RUIAN_popisky.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "Zvikov_RUIAN_popisky.glb",
+      "order": 27.141249802770023
+    },
+    "de2c337e-82d9-4c2f-831f-6ffaf85d8352": {
+      "id": "de2c337e-82d9-4c2f-831f-6ffaf85d8352",
+      "position": [
+        0,
+        6.661338147750939e-14,
+        -5.679798517591285e-29
+      ],
+      "rotation": [
+        4.930380657631324e-32,
+        1.8367099231597516e-40,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "c9630742-196b-428f-9007-2d3d405a24f3",
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/modely/popisky/Frymburk_CO_popisky.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "Frymburk_CO_popisky.glb",
+      "order": 1.7623520040933895
+    },
+    "cb152693-d369-471d-af3d-0c40c9b085a4": {
+      "id": "cb152693-d369-471d-af3d-0c40c9b085a4",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "48950640-7d5f-4540-b42a-04fd15fd2e5a",
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/modely/popisky/Frymburk_SMO5_popisky.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "Frymburk_SMO5_popisky.glb",
+      "order": 1.8040313561611279
+    },
+    "b01a53e6-0391-4665-bc4d-9d29eebb613f": {
+      "id": "b01a53e6-0391-4665-bc4d-9d29eebb613f",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "26291f93-76f7-469c-9094-3eb3ca349429",
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/modely/popisky/Frymburk_RUIAN_popisky.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "Frymburk_RUIAN_popisky.glb",
+      "order": 1.1904957954486284
     }
   },
   "spaces": {
