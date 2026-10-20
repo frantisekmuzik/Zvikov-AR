@@ -2136,10 +2136,10 @@
         "ignoreRaycast": true,
         "alignItems": "center",
         "justifyContent": "center",
-        "paddingLeft": "50%",
-        "paddingRight": "50%",
-        "paddingTop": "50%",
-        "paddingBottom": "50%",
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
         "position": "absolute",
         "top": 0,
         "left": 0,
@@ -2219,7 +2219,48 @@
         "justifyContent": "center"
       },
       "name": "Image",
-      "order": 2.95018469812159
+      "order": 2.95018469812159,
+      "disabled": true
+    },
+    "174929b8-4bd2-47eb-8ba6-ea02060175a1": {
+      "id": "174929b8-4bd2-47eb-8ba6-ea02060175a1",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "97c467b5-ee2a-4542-84aa-5b96450b2243",
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/Skenuj_atlas_animace.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "Skenuj_atlas_animace.glb",
+      "order": 4.865711496928315,
+      "ui": {
+        "background": "#ffffff",
+        "backgroundOpacity": 0,
+        "type": "3d",
+        "width": "70%",
+        "height": "60%"
+      }
     }
   },
   "spaces": {
