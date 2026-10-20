@@ -1,101 +1,105 @@
 import * as ecs from '@8thwall/ecs'
 
 const HIGHLIGHT_COLOR = '#26408C'
-const ORIG_COLOR = '#7894E8'   // výchozí barva tlačítek podle Inspectoru
+const ORIG_COLOR = '#7894E8'
 
-// pro každou entitu s komponentou: aktuální "generace" posluchačů
-const generation = new Map<ecs.Eid, number>()
+// popisky tlačítek podle území
+const LABELS = {
+  fry: ['rok 1826', 'rok 1952', 'rok 2026', 'prehrada\nLipno'],
+  zvi: ['rok 1830', 'rok 1952', 'rok 2026', 'prehrada\nOrlik'],
+}
+
+type Territory = 'fry' | 'zvi'
 
 ecs.registerComponent({
   name: 'period-switcher',
   schema: {
-    button1: ecs.eid,
-    button2: ecs.eid,
-    button3: ecs.eid,
-    button4: ecs.eid,
+    // jedna sada tlačítek (rodiče) + jejich Text potomci
+    button1: ecs.eid, button2: ecs.eid, button3: ecs.eid, button4: ecs.eid,
+    label1: ecs.eid, label2: ecs.eid, label3: ecs.eid, label4: ecs.eid,
 
-    model1: ecs.eid,
-    model2: ecs.eid,
-    model3: ecs.eid,
-    model4: ecs.eid,
+    // modely Frymburku
+    fryModel1: ecs.eid, fryModel2: ecs.eid, fryModel3: ecs.eid, fryRiver: ecs.eid,
+    // modely Zvíkova
+    zviModel1: ecs.eid, zviModel2: ecs.eid, zviModel3: ecs.eid, zviRiver: ecs.eid,
   },
 
   add: (world, component) => {
     const s = component.schema
-    const myGen = (generation.get(component.eid) || 0) + 1
-    generation.set(component.eid, myGen)
-    const alive = () => generation.get(component.eid) === myGen
+    console.log('period-switcher v8 add', component.eid)
 
-    console.log('period-switcher add', component.eid, 'gen', myGen)
-    console.log('period-switcher refs', component.eid, {
-      buttons: [s.button1, s.button2, s.button3, s.button4],
-      models: [s.model1, s.model2, s.model3, s.model4],
-    })
+    const buttons = [s.button1, s.button2, s.button3, s.button4]
+    const labels = [s.label1, s.label2, s.label3, s.label4]
+    const models = {
+      fry: {periods: [s.fryModel1, s.fryModel2, s.fryModel3], river: s.fryRiver},
+      zvi: {periods: [s.zviModel1, s.zviModel2, s.zviModel3], river: s.zviRiver},
+    }
+
+    // stav každého území: vybrané období (0-2) a zda je zapnutá řeka
+    const state = {
+      fry: {period: 0, river: false},
+      zvi: {period: 0, river: false},
+    }
+    let active: Territory | null = null
 
     const hide = (e: ecs.Eid) => {
       try {
         if (e && !ecs.Hidden.has(world, e)) ecs.Hidden.set(world, e, {})
-      } catch (err) {
-        console.error(err)
-      }
+      } catch (err) { console.error(err) }
     }
     const show = (e: ecs.Eid) => {
       try {
         if (e && ecs.Hidden.has(world, e)) ecs.Hidden.remove(world, e)
-      } catch (err) {
-        console.error(err)
-      }
+      } catch (err) { console.error(err) }
     }
     const color = (e: ecs.Eid, c: string) => {
-      try {
-        if (e && ecs.Ui.has(world, e)) ecs.Ui.set(world, e, {background: c})
-      } catch (err) {
-        console.error(err)
-      }
+      try { if (e && ecs.Ui.has(world, e)) ecs.Ui.set(world, e, {background: c}) } catch (err) { console.error(err) }
+    }
+    const text = (e: ecs.Eid, t: string) => {
+      try { if (e && ecs.Ui.has(world, e)) ecs.Ui.set(world, e, {text: t}) } catch (err) { console.error(err) }
     }
 
-    // reset do výchozího stavu: období 1 viditelné, ostatní a řeka skryté
-    show(s.model1)
-    hide(s.model2)
-    hide(s.model3)
-    hide(s.model4)
-    ;[s.button1, s.button2, s.button3, s.button4].forEach((b) => color(b, ORIG_COLOR))
-    color(s.button1, HIGHLIGHT_COLOR)
-
-    // zobrazí jedno období (1-3), ostatní skryje a obarví tlačítka
-    const pick = (active: number) => {
-      const models = [s.model1, s.model2, s.model3]
-      const btns = [s.button1, s.button2, s.button3]
-      models.forEach((m, i) => (i + 1 === active ? show(m) : hide(m)))
-      btns.forEach((b, i) => color(b, i + 1 === active ? HIGHLIGHT_COLOR : ORIG_COLOR))
-      console.log('pick', active, {
-        hidden: models.map((m) => ecs.Hidden.has(world, m)),
-      })
+    // promítne stav území do modelů
+    const applyModels = (t: Territory) => {
+      const m = models[t]
+      m.periods.forEach((e, i) => (i === state[t].period ? show(e) : hide(e)))
+      if (state[t].river) show(m.river); else hide(m.river)
     }
+
+    // promítne stav aktivního území do tlačítek
+    const applyButtons = () => {
+      if (!active) return
+      const st = state[active]
+      ;[0, 1, 2].forEach((i) => color(buttons[i], i === st.period ? HIGHLIGHT_COLOR : ORIG_COLOR))
+      color(buttons[3], st.river ? HIGHLIGHT_COLOR : ORIG_COLOR)
+      LABELS[active].forEach((t, i) => text(labels[i], t))
+    }
+
+    // start: výchozí stav obou území (období 1, řeka vypnutá)
+    applyModels('fry')
+    applyModels('zvi')
 
     const on = (target: ecs.Eid, fn: () => void) => {
       if (!target) return
       world.events.addListener(target, 'click', () => {
-        if (!alive()) return  // starý posluchač z dřívějšího spuštění
-        console.log('klik', target)
-        fn()
+        console.log('klik', target, 'aktivní:', active)
+        if (active) fn()
       })
     }
 
-    on(s.button1, () => pick(1))
-    on(s.button2, () => pick(2))
-    on(s.button3, () => pick(3))
+    on(s.button1, () => { state[active!].period = 0; applyModels(active!); applyButtons() })
+    on(s.button2, () => { state[active!].period = 1; applyModels(active!); applyButtons() })
+    on(s.button3, () => { state[active!].period = 2; applyModels(active!); applyButtons() })
+    on(s.button4, () => { state[active!].river = !state[active!].river; applyModels(active!); applyButtons() })
 
-    // Tlačítko 4: nezávislý přepínač řeky
-    on(s.button4, () => {
-      if (ecs.Hidden.has(world, s.model4)) {
-        show(s.model4)
-        color(s.button4, HIGHLIGHT_COLOR)
-      } else {
-        hide(s.model4)
-        color(s.button4, ORIG_COLOR)
-      }
-      console.log('river hidden:', ecs.Hidden.has(world, s.model4))
+    // které území je v záběru
+    world.events.addListener(world.events.globalId, ecs.events.REALITY_IMAGE_FOUND, (event) => {
+      const name = String((event.data as {name?: string} | undefined)?.name || '').toLowerCase()
+      console.log('image found:', name)
+      if (name.includes('zvikov') || name.includes('zvíkov')) active = 'zvi'
+      else if (name.includes('frymburk')) active = 'fry'
+      else return
+      applyButtons()
     })
   },
 })
