@@ -1,110 +1,5 @@
 {
   "objects": {
-    "35d3cf8f-c4ba-4b9c-9601-b13ab6dcb449": {
-      "id": "35d3cf8f-c4ba-4b9c-9601-b13ab6dcb449",
-      "position": [
-        0,
-        2,
-        -5
-      ],
-      "rotation": [
-        0,
-        0,
-        0,
-        1
-      ],
-      "scale": [
-        3,
-        3,
-        3
-      ],
-      "geometry": null,
-      "material": null,
-      "components": {
-        "6d46f7c7-07bd-493a-8b13-10201e919994": {
-          "id": "6d46f7c7-07bd-493a-8b13-10201e919994",
-          "name": "Pause Video on Image Target Lost",
-          "parameters": {
-            "videoPlayer": {
-              "type": "entity",
-              "id": "bf7fad6f-2adb-4b93-955d-65a6e8cf9fb9"
-            },
-            "imageTargetName": "waves"
-          }
-        }
-      },
-      "name": "Image Target Video",
-      "prefab": true
-    },
-    "bf7fad6f-2adb-4b93-955d-65a6e8cf9fb9": {
-      "id": "bf7fad6f-2adb-4b93-955d-65a6e8cf9fb9",
-      "position": [
-        0,
-        0,
-        0
-      ],
-      "rotation": [
-        0,
-        0,
-        0,
-        1
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "geometry": {
-        "type": "plane",
-        "width": 1,
-        "height": 0.5625
-      },
-      "material": {
-        "type": "unlit",
-        "color": "#FFFFFF",
-        "textureSrc": {
-          "type": "asset",
-          "asset": "assets/magic-photos/waves.mp4"
-        }
-      },
-      "parentId": "95eb1534-0d1c-4fcf-9474-047dc87890bc",
-      "components": {},
-      "name": "Video Player",
-      "videoControls": {
-        "paused": true,
-        "loop": true,
-        "positional": true
-      },
-      "order": 0.5911211005289122
-    },
-    "95eb1534-0d1c-4fcf-9474-047dc87890bc": {
-      "id": "95eb1534-0d1c-4fcf-9474-047dc87890bc",
-      "position": [
-        0,
-        0,
-        0.01
-      ],
-      "rotation": [
-        0,
-        0,
-        0,
-        1
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "35d3cf8f-c4ba-4b9c-9601-b13ab6dcb449",
-      "components": {},
-      "name": "Target",
-      "imageTarget": {
-        "name": "waves"
-      },
-      "order": 2.182242201057824
-    },
     "24457116-728f-45ea-a630-9f175889265b": {
       "components": {},
       "geometry": null,
@@ -302,7 +197,7 @@
       },
       "order": 7.401958399382184,
       "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03",
-      "hidden": false
+      "hidden": true
     },
     "d82012b5-0570-43c9-9516-f5c68e010a3b": {
       "id": "d82012b5-0570-43c9-9516-f5c68e010a3b",
@@ -1756,6 +1651,70 @@
       "name": "Vltava_Frymburk",
       "order": 14,
       "hidden": false
+    },
+    "c0d8ce2a-ef87-4573-8d28-e40d75c2b26c": {
+      "id": "c0d8ce2a-ef87-4573-8d28-e40d75c2b26c",
+      "position": [
+        -0.000004625730668392834,
+        0,
+        -3.430323033447678
+      ],
+      "rotation": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ],
+      "scale": [
+        0.545,
+        0.545,
+        0.545
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "d82012b5-0570-43c9-9516-f5c68e010a3b",
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/modely/Zvikov_legenda.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "Zvikov_legenda.glb",
+      "order": 2.542036610693459
+    },
+    "48d1396c-1fcc-4012-b633-f45cfe671069": {
+      "id": "48d1396c-1fcc-4012-b633-f45cfe671069",
+      "position": [
+        -0.000004625730668392834,
+        0,
+        147.73762827415797
+      ],
+      "rotation": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ],
+      "scale": [
+        0.545,
+        0.545,
+        0.545
+      ],
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/modely/Frymburk_legenda.glb"
+        },
+        "animationClip": "",
+        "loop": true
+      },
+      "name": "Frymburk_legenda",
+      "order": -0.8844611817770867,
+      "parentId": "78127f6a-feb4-49f0-a6ee-8a82802710f0"
     }
   },
   "spaces": {

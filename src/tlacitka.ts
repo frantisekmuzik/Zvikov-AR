@@ -34,7 +34,7 @@ ecs.registerComponent({
     }
     const state = {
       fry: {period: 0, river: false},
-      zvi: {period: 0, river: false},
+      zvi: {period: 1, river: false},   // Zvíkov začíná modelem SMO5 (rok 1952)
     }
     let active: Territory | null = null
 
