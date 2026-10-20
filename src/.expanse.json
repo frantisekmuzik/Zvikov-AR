@@ -296,7 +296,8 @@
         "name": "10_5_LandUse_Zvikov"
       },
       "order": 7.401958399382184,
-      "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03"
+      "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03",
+      "hidden": true
     },
     "d82012b5-0570-43c9-9516-f5c68e010a3b": {
       "id": "d82012b5-0570-43c9-9516-f5c68e010a3b",
@@ -353,7 +354,7 @@
       },
       "name": "Zvikov_CO",
       "order": 5,
-      "hidden": false
+      "hidden": true
     },
     "441f2fab-9fd2-4c5b-bafa-d0f086989726": {
       "id": "441f2fab-9fd2-4c5b-bafa-d0f086989726",
@@ -665,7 +666,7 @@
       },
       "name": "Zvikov_SMO5",
       "order": 13,
-      "hidden": true
+      "hidden": false
     },
     "4059b148-9ad1-48dc-8f82-b839525d1e19": {
       "id": "4059b148-9ad1-48dc-8f82-b839525d1e19",
@@ -1582,7 +1583,8 @@
         "name": "10_4_LandUse_Frymburk"
       },
       "order": 7.812616116309772,
-      "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03"
+      "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03",
+      "hidden": true
     },
     "78127f6a-feb4-49f0-a6ee-8a82802710f0": {
       "id": "78127f6a-feb4-49f0-a6ee-8a82802710f0",
@@ -2096,6 +2098,128 @@
       "name": "Vltava_Frymburk",
       "order": 14,
       "hidden": false
+    },
+    "97c467b5-ee2a-4542-84aa-5b96450b2243": {
+      "id": "97c467b5-ee2a-4542-84aa-5b96450b2243",
+      "position": [
+        20,
+        20,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        300,
+        300,
+        300
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03",
+      "components": {
+        "cfc749c2-3fc3-4dac-9e4e-ebba8c04ae74": {
+          "id": "cfc749c2-3fc3-4dac-9e4e-ebba8c04ae74",
+          "name": "scan-prompt",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "width": "100%",
+        "height": "100%",
+        "type": "overlay",
+        "background": "#ffffff",
+        "backgroundOpacity": 0,
+        "ignoreRaycast": true,
+        "alignItems": "center",
+        "justifyContent": "center",
+        "paddingLeft": "50%",
+        "paddingRight": "50%",
+        "paddingTop": "50%",
+        "paddingBottom": "50%",
+        "position": "absolute",
+        "top": 0,
+        "left": 0,
+        "bottom": "",
+        "right": ""
+      },
+      "name": "Scan prompt",
+      "order": 1.3415438088110747
+    },
+    "2e77e49a-a9b9-4ea1-a97c-edd749aff8ad": {
+      "id": "2e77e49a-a9b9-4ea1-a97c-edd749aff8ad",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "97c467b5-ee2a-4542-84aa-5b96450b2243",
+      "components": {},
+      "ui": {
+        "width": 70,
+        "height": 10,
+        "text": "Namiř na atlas",
+        "color": "#ffffff",
+        "fontSize": 12,
+        "type": "3d"
+      },
+      "name": "Text (1)",
+      "order": 1.6121847031547054
+    },
+    "ea594ecf-60f9-4e48-b58f-d6ecbc2a23cf": {
+      "id": "ea594ecf-60f9-4e48-b58f-d6ecbc2a23cf",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "97c467b5-ee2a-4542-84aa-5b96450b2243",
+      "components": {},
+      "ui": {
+        "type": "3d",
+        "width": "70%",
+        "height": "60%",
+        "image": {
+          "type": "asset",
+          "asset": "assets/skenuj_atlas_barva.gif"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain",
+        "ignoreRaycast": true,
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "Image",
+      "order": 2.95018469812159
     }
   },
   "spaces": {
