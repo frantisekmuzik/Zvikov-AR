@@ -8,7 +8,6 @@ import {ensureFont, FONT_FAMILY} from './fonts'
 
 const TITLE = 'Naskenuj stránku atlasu'
 const SUBTITLE = 'Zamiř kamerou na mapu Zvíkova nebo Frymburku'
-const HINT = 'Pro stabilní sledování AR jsou nutné dobré světelné podmínky.'
 const SHOW_DELAY_MS = 500   // zpoždění zobrazení po ztrátě trackingu
 
 ecs.registerComponent({
@@ -47,13 +46,8 @@ ecs.registerComponent({
     sub.textContent = SUBTITLE
     sub.style.cssText = 'font-size:18px;font-weight:400;line-height:1.4;margin-top:6px;opacity:0.9'
 
-    const hint = document.createElement('div')
-    hint.textContent = HINT
-    hint.style.cssText = 'font-size:15px;font-weight:400;line-height:1.35;margin-top:10px;opacity:0.8'
-
     box.appendChild(title)
     box.appendChild(sub)
-    box.appendChild(hint)
     document.body.appendChild(box)
 
     const show = (v: boolean) => {
