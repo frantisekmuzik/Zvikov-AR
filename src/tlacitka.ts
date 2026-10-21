@@ -38,6 +38,111 @@ ecs.registerComponent({
     }
     let active: Territory | null = null
 
+    // ---------- líné načítání modelů terénu ----------
+    // Při startu se z modelů terénu odebere komponenta GltfModel (nic se nestahuje).
+    // Model se načte až když je potřeba: vybrané období po nalezení mapy, ostatní s odstupem na pozadí.
+    const FALLBACK: Record<string, string> = {
+      fry0: 'assets/modely/Frymburk_CO_stylized_v5.glb',
+      fry1: 'assets/modely/Frymburk_SMO5_stylized_v5.glb',
+      fry2: 'assets/modely/Frymburk_RUIAN_stylized_v6.glb',
+      zvi0: 'assets/modely/Zvikov_CO_stylized_v4.glb',
+      zvi1: 'assets/modely/Zvikov_SMO5_stylized_v4.glb',
+      zvi2: 'assets/modely/Zvikov_RUIAN_stylized_v4.glb',
+    }
+    const PRELOAD_DELAY_MS = 4000
+    const urls = new Map<ecs.Eid, string>()
+    const loaded = new Set<ecs.Eid>()
+    ;(['fry', 'zvi'] as Territory[]).forEach((t) => {
+      models[t].periods.forEach((e, i) => {
+        if (!e) return
+        let url = ''
+        try { if (ecs.GltfModel.has(world, e)) url = ecs.GltfModel.get(world, e).url || '' } catch (err) { console.error(err) }
+        urls.set(e, url || FALLBACK[`${t}${i}`])
+        try { if (ecs.GltfModel.has(world, e)) ecs.GltfModel.remove(world, e) } catch (err) { console.error(err) }
+      })
+    })
+    // ---------- úvodní obrazovka se stahováním modelů ----------
+    // Všechny modely terénu se stáhnou najednou (do mezipaměti prohlížeče) a uživatel vidí průběh.
+    // Potom je stažení modelů do scény okamžité a úvodní obrazovka se skryje.
+    const buildLoader = () => {
+      const MB = 1024 * 1024
+      const box = document.createElement('div')
+      box.setAttribute('data-loading-screen', '')
+      box.style.cssText = [
+        'position:fixed', 'inset:0', 'z-index:20', 'display:flex', 'flex-direction:column',
+        'align-items:center', 'justify-content:center', 'text-align:center', 'padding:24px',
+        'box-sizing:border-box', 'background:#3b3a5c', 'color:#fff', `font-family:${FONT_FAMILY}`,
+        'transition:opacity 0.4s ease',
+      ].join(';')
+      box.innerHTML =
+        '<div style="font-size:34px;font-weight:700;letter-spacing:0.04em">VLTAVA</div>' +
+        '<div style="font-size:16px;opacity:0.85;margin:6px 0 34px">Příběh řeky na mapách a plánech</div>' +
+        '<div data-t style="font-size:20px;font-weight:700;margin-bottom:14px">Načítám 3D modely…</div>' +
+        '<div style="width:min(80vw,360px);height:12px;border-radius:6px;background:rgba(255,255,255,0.2);overflow:hidden">' +
+        '<div data-b style="width:0%;height:100%;border-radius:6px;background:#7894e8;transition:width 0.2s ease"></div></div>' +
+        '<div data-p style="font-size:16px;opacity:0.85;margin-top:12px">0 %</div>'
+      document.body.appendChild(box)
+      const bar = box.querySelector('[data-b]') as HTMLElement
+      const pct = box.querySelector('[data-p]') as HTMLElement
+      const title = box.querySelector('[data-t]') as HTMLElement
+
+      const list = Array.from(urls.values())
+      const total = new Array(list.length).fill(0)
+      const got = new Array(list.length).fill(0)
+      const render = () => {
+        const g = got.reduce((a, b) => a + b, 0)
+        const t = total.reduce((a, b) => a + b, 0)
+        const f = t > 0 ? Math.min(1, g / t) : 0
+        bar.style.width = `${(f * 100).toFixed(0)}%`
+        pct.textContent = t > 0 ? `${(f * 100).toFixed(0)} %  ·  ${(g / MB).toFixed(1)} / ${(t / MB).toFixed(1)} MB` : '0 %'
+      }
+
+      const fetchOne = async (url: string, i: number) => {
+        for (let attempt = 0; attempt < 3; attempt++) {
+          try {
+            got[i] = 0
+            const res = await fetch(url)
+            if (!res.ok || !res.body) throw new Error(`HTTP ${res.status}`)
+            total[i] = Number(res.headers.get('content-length')) || 6 * MB
+            const reader = res.body.getReader()
+            for (;;) {
+              const {done, value} = await reader.read()
+              if (done) break
+              got[i] += value.length
+              render()
+            }
+            total[i] = got[i]
+            render()
+            return
+          } catch (err) {
+            console.error('stažení modelu selhalo', url, err)
+            await new Promise(r => window.setTimeout(r, 1000))
+          }
+        }
+      }
+
+      Promise.all(list.map(fetchOne)).then(() => {
+        title.textContent = 'Hotovo'
+        bar.style.width = '100%'
+        box.style.opacity = '0'
+        box.style.pointerEvents = 'none'
+        window.setTimeout(() => box.remove(), 450)
+      })
+    }
+    buildLoader()
+
+    const ensureLoaded = (e: ecs.Eid) => {
+      if (!e || loaded.has(e)) return
+      loaded.add(e)
+      try { ecs.GltfModel.set(world, e, {url: urls.get(e) || '', loop: true}) } catch (err) { console.error(err) }
+    }
+    const preloadOthers = (t: Territory) => {
+      models[t].periods.forEach((e, i) => {
+        if (i === state[t].period) return
+        window.setTimeout(() => ensureLoaded(e), PRELOAD_DELAY_MS * (1 + i))
+      })
+    }
+
     const hide = (e: ecs.Eid) => {
       try { if (e && !ecs.Hidden.has(world, e)) ecs.Hidden.set(world, e, {}) } catch (err) { console.error(err) }
     }
@@ -48,7 +153,7 @@ ecs.registerComponent({
     const applyModels = (t: Territory) => {
       const m = models[t]
       // nejdřív zobrazit vybraný model, pak skrýt ostatní (bez mezery)
-      m.periods.forEach((e, i) => { if (i === state[t].period) show(e) })
+      m.periods.forEach((e, i) => { if (i === state[t].period) { ensureLoaded(e); show(e) } })
       m.periods.forEach((e, i) => { if (i !== state[t].period) hide(e) })
       if (state[t].river) show(m.river); else hide(m.river)
     }
@@ -111,10 +216,14 @@ ecs.registerComponent({
       btns[3].style.background = st.river ? HIGHLIGHT_COLOR : ORIG_COLOR
     }
 
-    applyModels('fry')
-    applyModels('zvi')
+    // na začátku vše skryto, nic se nenačítá
+    ;(['fry', 'zvi'] as Territory[]).forEach((t) => {
+      models[t].periods.forEach(hide)
+      hide(models[t].river)
+    })
     applyButtons()
 
+    const preloaded = new Set<Territory>()
     const nameOf = (event: {data?: unknown}) =>
       String((event.data as {name?: string} | undefined)?.name || '').toLowerCase()
 
@@ -124,12 +233,14 @@ ecs.registerComponent({
       if (name.includes('zvikov') || name.includes('zvíkov')) active = 'zvi'
       else if (name.includes('frymburk')) active = 'fry'
       else return
+      applyModels(active)
+      if (!preloaded.has(active)) { preloaded.add(active); preloadOthers(active) }
       applyButtons()
     })
     // po ztrátě targetu zůstanou tlačítka dál viditelná u posledního území (plynulé přepínání)
   },
 
   remove: () => {
-    document.querySelectorAll('body > div[data-period-switcher]').forEach(el => el.remove())
+    document.querySelectorAll('body > div[data-period-switcher], body > div[data-loading-screen]').forEach(el => el.remove())
   },
 })

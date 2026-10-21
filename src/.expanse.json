@@ -197,7 +197,7 @@
       },
       "order": 7.401958399382184,
       "parentId": "5a1790f6-d028-4722-a25f-ae6622c37f03",
-      "hidden": true
+      "hidden": false
     },
     "d82012b5-0570-43c9-9516-f5c68e010a3b": {
       "id": "d82012b5-0570-43c9-9516-f5c68e010a3b",
@@ -286,7 +286,7 @@
       },
       "name": "Zvikov_SMO5",
       "order": 13,
-      "hidden": false
+      "hidden": true
     },
     "a4def8f4-e61f-401a-a2a1-66243e2397d6": {
       "id": "a4def8f4-e61f-401a-a2a1-66243e2397d6",
